@@ -2,10 +2,11 @@
   --body-bg: #151515;
   --dark-gray: #242424;
   --green: #4EE1a0;
-  --gray: #d9d9d9;
+  --gray: #d9d9d950;
   --text1: #ffffff;
   --red: #ff6f5b;
-  --fs-body: 1.125rem;
+  --margin: 12vw;
+  
 }
 html{
   box-sizing: border-box;
@@ -24,5 +25,61 @@ body {
   color: var(--text1);
   font-size: var(--fs-body);
   line-height: 1.56;
+}
+.myHeader{
+  background-color: var(--gray);
+  
+}
+.headerLayout{
+  margin-left: var(--margin);
+  margin-right: var(--margin);
+}
+.myHeader ul{
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  column-gap: 9vw;
+  font-size: 1.5vw;
+}
+
+.myHeader ul li a {
+  text-decoration: none;
+  color: var(--text1);
+  
+}
+.pages{
+  display: flex;
+  column-gap: 9vw;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.socials{
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  gap: 2vw;
+}
+.socials img{
+  max-width: 20px;
+  width: 100%;
+}
+.myBody{
+
+}
+.front{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-bg);
+  margin-left: var(--margin);
+  margin-right: var(--margin)
+}
+.about{
 
 }
