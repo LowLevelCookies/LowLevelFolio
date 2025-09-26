@@ -5,41 +5,93 @@
   --gray: #d9d9d950;
   --text1: #ffffff;
   --red: #ff6f5b;
-  --margin: 12vw;
-  
+  --margin-front: 8vw;
+  --margin-topbottom: 10vh;
+  --margin-element: 5vh;
+  --padding-body: 3vw;
 }
 html{
   box-sizing: border-box;
   font-size: 100%;
 }
-*, *::before, *::after{
-  box-sizing: inherit;
-}
 body {
+  background-image: url('assets/images/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   margin: 0;
   font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   background-color: var(--body-bg);
   color: var(--text1);
   font-size: var(--fs-body);
-  line-height: 1.56;
+  line-height: 2rem;
 }
-
+img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+h1{
+  font-size: 3rem;
+}
 .front{
+  padding-left: var(--padding-body);
+  padding-right: var(--padding-body);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
   justify-content: center;
   align-items: center;
   background-color: var(--body-bg);
-  margin-left: var(--margin);
-  margin-right: var(--margin)
+  margin-left: var(--margin-front);
+  margin-right: var(--margin-front)
+  
 }
-.odd{
-  margin-top: 20vh;
-  margin-bottom: 20vh;
+.base{
+  margin-top: var(--margin-topbottom);
+  margin-bottom: var(--margin-topbottom);
   display: flex;
+
+}
+.oddElm{
+  margin-top: var(--margin-element);
+  margin-right: 1vw;
+  justify-content: left;
+}
+.oddPic{
+  justify-content: right;
+}
+.evenElm{
+  margin-left: 1vw;
+  margin-top: var(--margin--element);
+  justify-content: right;
+}
+.evenPic{
+  justify-content: left;
+}
+.bodyButton{
+  border: none;
+  width: 20vw;
+  text-align: center;
+  padding: 16px 32px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  background-color: #cececc;
+  color: black;
+
+}
+.bodyButton:hover{
+  background-color: #c60707;
+  color: white;
+}
+.myFooter{
+  font-size: 0.8rem;
+  color: #585454;
 }
