@@ -1,21 +1,22 @@
 :root{
-  --body-bg: #151515;
+  --body-bg: #000000;
   --dark-gray: #242424;
   --green: #4EE1a0;
-  --gray: #d9d9d950;
+  --gray: #cececc;
   --text1: #ffffff;
-  --red: #ff6f5b;
+  --red: #c60707;
   --margin-front: 8vw;
   --margin-topbottom: 10vh;
   --margin-element: 5vh;
   --padding-body: 3vw;
+  --nav-gap: 10vw;
 }
 html{
   box-sizing: border-box;
   font-size: 100%;
 }
 body {
-  background-image: url('assets/images/bg.jpg');
+  background-image: url('assets/images_home/bg.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -51,6 +52,7 @@ h1{
   margin-right: var(--margin-front)
   
 }
+
 .base{
   margin-top: var(--margin-topbottom);
   margin-bottom: var(--margin-topbottom);
@@ -83,12 +85,12 @@ h1{
   border-radius: 5px;
   transition-duration: 0.5s;
   cursor: pointer;
-  background-color: #cececc;
-  color: black;
+  background-color: var(--gray);
+  color: var(--body-bg);
 
 }
 .bodyButton:hover{
-  background-color: #c60707;
+  background-color: var(--red);
   color: white;
 }
 .myFooter{
