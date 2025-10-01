@@ -1,7 +1,6 @@
 :root{
   --body-bg: #000000;
   --dark-gray: #242424;
-  --green: #4EE1a0;
   --gray: #cececc;
   --text1: #ffffff;
   --red: #c60707;
@@ -10,6 +9,9 @@
   --margin-element: 5vh;
   --padding-body: 3vw;
   --nav-gap: 10vw;
+  --fs-body: 1rem;
+  --padding-at-top: 3vh;
+  --transition: 0.5s;
 }
 html{
   box-sizing: border-box;
@@ -18,7 +20,7 @@ html{
 body {
   background-image: url('assets/images_home/bg.jpg');
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
   margin: 0;
   font-family: "Space Grotesk", sans-serif;
@@ -39,6 +41,7 @@ img{
 h1{
   font-size: 3rem;
 }
+
 .front{
   padding-left: var(--padding-body);
   padding-right: var(--padding-body);
@@ -50,9 +53,39 @@ h1{
   background-color: var(--body-bg);
   margin-left: var(--margin-front);
   margin-right: var(--margin-front)
-  
-}
 
+}
+.button-group{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%; 
+}
+.button-group .a-button{
+  display: flex;
+  flex: 1;
+  color: var(--text1);
+  background-color: var(--body-bg);
+  border: none;
+  text-align: left;
+  font-size: 1.2rem;
+  text-decoration: none;
+  cursor: pointer;
+  padding-top: var(--padding-at-top);
+  transition-duration: var(--transition);
+}
+.button-group .a-button:hover{
+  color: var(--red);
+}
+.button-group .socials{
+  flex: 1;
+  text-decoration: none;
+  text-align: center;
+
+}
+.button-group .socials .icons{
+  padding-top: var(--padding-at-top);
+  max-width: 15%;
+}
 .base{
   margin-top: var(--margin-topbottom);
   margin-bottom: var(--margin-topbottom);
@@ -69,7 +102,7 @@ h1{
 }
 .evenElm{
   margin-left: 1vw;
-  margin-top: var(--margin--element);
+  margin-top: var(--margin-element);
   justify-content: right;
 }
 .evenPic{
@@ -83,7 +116,7 @@ h1{
   text-decoration: none;
   font-size: 1rem;
   border-radius: 5px;
-  transition-duration: 0.5s;
+  transition-duration: var(--transition);
   cursor: pointer;
   background-color: var(--gray);
   color: var(--body-bg);
@@ -92,6 +125,9 @@ h1{
 .bodyButton:hover{
   background-color: var(--red);
   color: white;
+}
+@media (max-width: 768px) {
+  
 }
 .myFooter{
   font-size: 0.8rem;
